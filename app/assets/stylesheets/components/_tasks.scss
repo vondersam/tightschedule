@@ -1,0 +1,37 @@
+.crossed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.complete {
+  float: left;
+  width:10%;
+}
+.task {
+  float: left;
+  width: 50%;
+}
+
+.delete {
+  float: left;
+  text-align: right;
+  margin-right: 0.5em;
+  width:5%;
+}
+
+.block {
+  display: flex;
+  text-align: space-around;
+  align-items: center;
+}
+.duedate {
+  float: left;
+  width: 35%;
+  text-align: right;
+  margin-right: 1em;
+}
+.date {
+  background: transparent;
+  color: $white;
+  margin-right: 0.5em;
+}

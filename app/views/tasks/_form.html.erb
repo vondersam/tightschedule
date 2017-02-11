@@ -1,0 +1,8 @@
+<div class="form-container">
+  <%= simple_form_for([ list, task ], remote: true) do |form| %>
+    <%= form.input :content, placeholder: 'Add a task', label: false %>
+    <%= form.input :duedate, as: :date, label: false, class: 'date' %>
+    <%= form.button :submit %>
+  <% end %>
+</div>
+

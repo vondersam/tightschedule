@@ -1,0 +1,35 @@
+.list_name {
+  margin: 0;
+  a {
+    text-decoration: none;
+    transition: all .4s ease-in-out;
+    color: $white;
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+}
+
+.list_delete {
+  font-size: 0.9em;
+  color: $red;
+  font-weight: 100;
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}
+.index_row {
+  padding: 2em;
+  border-bottom: 1px solid rgba(250,250,250, .3);
+}
+.links {
+  display: block;
+  margin: 1.5em auto 0 auto;
+  text-align: center;
+  font-size: 0.8em;
+  color: $red;
+  a {
+    color: $red;
+  }
+}

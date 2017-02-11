@@ -1,0 +1,52 @@
+<div class="container">
+  <h2><%= @list.name %> | Tasks</h2>
+
+  <%= render 'tasks/form', list: @list, task: @task %>
+  <div id="tasks">
+  <% @list.tasks.each do |task| %>
+      <% if task.completed? %>
+      <div data-task-id="<%= task.id %>" class="block">
+        <div class="complete">
+          <%= link_to complete_list_task_path(@list, task.id), method: :patch do %>
+            <i class="fa fa-check"></i>
+          <% end %>
+        </div>
+        <div class="task">
+          <p class="crossed"><%= task.content %></p>
+        </div>
+        <div class="duedate crossed">
+          <%= task.duedate %>
+        </div>
+        <div class="delete">
+          <%= link_to list_task_path(@list, task.id), method: :delete, remote: true do %>
+            <i class="fa fa-trash"></i>
+          <% end %>
+        </div>
+      </div>
+      <% else %>
+      <div data-task-id="<%= task.id %>" class="block">
+        <div class="complete">
+          <%= link_to complete_list_task_path(@list, task.id), method: :patch do %>
+            <i class="fa fa-check"></i>
+          <% end %>
+        </div>
+        <div class="task">
+          <p><%= task.content %></p>
+        </div>
+        <div class="duedate">
+          <%= task.duedate %>
+        </div>
+        <div class="delete">
+          <%= link_to list_task_path(@list, task.id), method: :delete, remote: true do %>
+            <i class="fa fa-trash"></i>
+          <% end %>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+
+
+

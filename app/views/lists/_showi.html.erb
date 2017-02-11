@@ -1,0 +1,6 @@
+<div data-list-id="<%= list.id %>" class="index_row">
+  <h2 class="list_name"><%= link_to list.name, list_path(list) %></h2>
+  <p class="list_delete"><%= link_to 'Delete', list_path(list), method: :delete, remote: true %></p>
+</div>
+
+

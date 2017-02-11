@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+  <div class="navbar">
+    <%= link_to lists_path, class: "logo-nav" do %>
+      <h1>Tight. Schedule.</h1>
+    <% end %>
+
+  <%= link_to(destroy_user_session_path, class: "navbar-item",  method: :delete) do %>
+    <%= t(".sign_out", default: "Log out") %>
+  <% end %>
+  </div>
+<% else %>
+<% end %>
+

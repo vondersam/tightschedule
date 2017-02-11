@@ -1,0 +1,8 @@
+<% if @task.valid? %>
+  var newTask = $("<%= j render 'tasks/show', task: @task %>").hide();
+  $('#tasks').prepend(newTask);
+  newTask.slideDown();
+  $('#task_content').val('');
+<% else %>
+  $('#new_task').html("<%= j render 'tasks/form', list: @list, task: @task %>");
+<% end %>

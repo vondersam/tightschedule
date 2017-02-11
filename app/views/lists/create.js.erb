@@ -1,0 +1,8 @@
+<% if @list.valid? %>
+  var newList = $("<%= j render 'lists/showi', list: @list %>").hide();
+  $('#lists').prepend(newList);
+  newList.slideDown();
+  $('#list_name').val('');
+<% else %>
+  $('#new_list').html("<%= j render 'lists/form', list: @list %>");
+<% end %>

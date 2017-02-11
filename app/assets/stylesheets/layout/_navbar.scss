@@ -1,0 +1,19 @@
+.navbar {
+  background: transparent;
+  color: $white;
+  height: 10px;
+  padding: 20px 30px;
+  position: static;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.navbar-item {
+  float: right;
+  color: $white;
+  text-decoration: none;
+  margin-top: 18px;
+}

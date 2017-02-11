@@ -1,0 +1,4 @@
+<%= simple_form_for(:list, remote: true) do |form| %>
+  <%= form.input :name, placeholder: 'Add a list', label: false %>
+  <%= form.button :submit %>
+<% end %>
